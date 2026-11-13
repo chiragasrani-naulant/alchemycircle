@@ -5,196 +5,192 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alchemy Circle – Therapy &amp; Mental Health Community</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&amp;family=Manrope:wght@400..700&amp;display=swap">
 <style>
-:root{--b:#0a3fd6;--deep:#06208a;--lime:#b6f500;--ink:#0b0b0b;--sheet:#fff;--card:#f2f2f2;--line:#0b0b0b;
---f:'Archivo','Arial Black',Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-:root{color-scheme:light}
-
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{color-scheme:light;--bg:#f6f5f0;--ink:#121212;--mut:#86857f;--ln:rgba(18,18,18,.1);--lime:#d4f55a;--lav:#bdaaff;--pea:#ffb98a;--sh:0 24px 50px -26px rgba(20,20,20,.28),0 2px 6px rgba(20,20,20,.04);
+--s:'Newsreader','Playfair Display',Georgia,serif;--f:'Manrope',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{background:var(--bg);scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:border-box}
-html,body{margin:0}
-html{background:var(--b)}
-body{background:var(--b);font-family:var(--f);font-weight:500;color:var(--ink);line-height:1.5;-webkit-text-size-adjust:100%}
-.frame{overflow:clip;background:var(--b);color:#fff;min-height:100vh}
-h1,h2,h3{font-weight:900;font-stretch:125%;text-transform:uppercase;line-height:.88;letter-spacing:-.02em;margin:0}
+body{margin:0;font:400 1rem/1.6 var(--f);color:var(--ink);background:radial-gradient(70% 45% at 50% 0,#fff 0,transparent 70%),var(--bg);overflow-x:clip;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--s);font-weight:500;letter-spacing:-.025em;line-height:1;margin:0}
+em{font-style:italic}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
-.sheet :focus-visible{outline-color:var(--b)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 /* header */
-header{position:sticky;top:0;z-index:30;background:var(--b);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px max(clamp(16px,4vw,44px),calc((100% - 1240px)/2))}
-.logo{display:flex;text-decoration:none;font-weight:900;font-stretch:125%;font-size:.95rem;text-transform:uppercase}
-.logo b{background:#fff;color:#0b0b0b;padding:7px 12px 7px 14px;border-radius:99px 0 0 99px}
-.logo i{font-style:normal;color:var(--lime);border:2px solid var(--lime);border-left:0;padding:5px 14px 5px 10px;border-radius:0 99px 99px 0}
-nav{display:flex;gap:8px}
-.pl{display:inline-block;font:700 .85rem var(--f);text-decoration:none;color:#fff;border:1.5px solid rgba(255,255,255,.7);padding:7px 16px;border-radius:99px;background:transparent;cursor:pointer;transition:background .15s,color .15s}
-.pl:hover,.pl.on{background:var(--lime);color:#0b0b0b;border-color:var(--lime)}
-.pl.big{padding:12px 28px;font-size:.95rem;border-width:2px}
-.pl.lm{background:var(--lime);color:#0b0b0b;border-color:var(--lime)}.pl.lm:hover{background:#fff;border-color:#fff}
-#mb{display:none}
-@media(max-width:860px){#mb{display:inline-block}header>.pl.big{display:none}nav{display:none;position:absolute;top:100%;left:12px;right:12px;flex-direction:column;background:var(--b);border:2px solid #fff;border-radius:24px;padding:14px}nav.open{display:flex}nav .pl{font-size:1rem;padding:12px 18px;text-align:center}}
+header{position:sticky;top:0;z-index:30;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:18px max(clamp(16px,4vw,48px),calc((100% - 1240px)/2));background:linear-gradient(var(--bg) 60%,transparent)}
+.logo{font:600 1.5rem var(--s);letter-spacing:-.03em;text-decoration:none;justify-self:start}
+.logo sup{font-size:.55em;font-weight:400}
+nav{display:flex;gap:2px;padding:5px;border:1px solid var(--ln);border-radius:99px;background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+nav a{text-decoration:none;font-size:.88rem;font-weight:500;padding:9px 18px;border-radius:99px;transition:background .2s}
+nav a:hover{background:rgba(0,0,0,.05)}nav a.on{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 .92rem var(--f);padding:14px 26px;border-radius:99px;border:1px solid var(--ln);background:#fff;color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s}
+.bt:hover{transform:translateY(-2px)}.bt.dk{background:var(--ink);color:#fff;border-color:var(--ink)}
+header>.bt{justify-self:end;padding:12px 22px}
+.pi{width:22px;height:22px;border-radius:50%;background:var(--ink);display:inline-block;position:relative}.pi::after{content:"";position:absolute;left:8px;top:6px;border:5px solid transparent;border-left:7px solid #fff;border-right:0}
+#mb{display:none;justify-self:end}
+@media(max-width:900px){header{grid-template-columns:1fr auto}#mb{display:inline-flex;padding:10px 20px}header>.bt{display:none}nav{display:none;position:absolute;top:100%;left:16px;right:16px;flex-direction:column;border-radius:26px;background:#fff;box-shadow:var(--sh)}nav.open{display:flex}nav a{padding:13px 18px;font-size:1rem}}
 /* pages */
 .page{display:none}.page.on{display:block}
-.top{position:relative;text-align:center;padding:clamp(24px,5vw,56px) clamp(16px,4vw,44px) clamp(100px,14vw,170px);background-image:linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);background-size:clamp(40px,6vw,76px) clamp(40px,6vw,76px)}
-.top.s{padding-bottom:clamp(70px,10vw,120px)}
-.big{position:relative;display:inline-block;max-width:100%}
-.big h1{font-size:clamp(2.3rem,12.6vw,10.4rem);display:block}
-.top.s h1{font-size:clamp(2.2rem,10vw,8rem)}
-.hash{display:inline-block;color:var(--lime);transform:rotate(-8deg) translate(-.04em,-.08em);margin-right:.04em}
-.lead{max-width:520px;margin:clamp(84px,10vw,120px) auto 22px;font-size:clamp(1rem,2vw,1.15rem)}
-.top.s .lead{margin-top:26px}
-.arr{position:absolute;width:clamp(60px,12vw,150px);fill:none;stroke:var(--lime);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
-.a1{right:-1%;top:-6%}.a2{left:-3%;top:-10%;transform:scaleX(-1)}
-.glass{position:absolute;width:clamp(110px,22vw,250px);aspect-ratio:1;border-radius:clamp(18px,3vw,36px);background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-align:center;font-size:clamp(.6rem,1.6vw,1rem);font-weight:800}
-.glass small{font-weight:500;opacity:.85;font-size:.8em}
-.glass .ph{width:42%;aspect-ratio:1;border-radius:50%;background:#fff;color:var(--b);display:grid;place-items:center;font-weight:900;font-size:clamp(1rem,3.4vw,2.2rem);border:3px solid var(--lime);margin-bottom:4px}
-.g1{right:20%;top:70%;--r:12deg}.g2{left:5%;top:76%;--r:-10deg}
-.badge{position:absolute;right:-3%;top:56%;width:clamp(84px,15vw,190px);aspect-ratio:1;display:grid;place-items:center}
-.badge svg{position:absolute;inset:0;width:100%;height:100%}
-.badge .rot{animation:spin 16s linear infinite}
-.badge .sc{inset:28%;width:44%;height:44%;fill:none;stroke:#0b0b0b;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.hero{position:relative;text-align:center;padding:clamp(18px,4vw,40px) clamp(16px,4vw,40px) 0;max-width:1240px;margin:auto}
+.hd{font-size:clamp(2.6rem,7.4vw,6.2rem);line-height:.96}
+.hd span,.hd em{display:block;animation:rise 1s cubic-bezier(.2,.8,.2,1) both}.hd em{animation-delay:.14s}
+@keyframes rise{from{opacity:0;transform:translateY(34px);filter:blur(10px)}}
+.lead{max-width:470px;margin:clamp(18px,3vw,30px) auto 24px;color:var(--mut);font-size:clamp(.95rem,1.8vw,1.08rem)}
+.hero .lead,.hero .cta{animation:rise .9s cubic-bezier(.2,.8,.2,1) .4s both}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stage{position:relative;height:clamp(280px,38vw,480px);margin-top:clamp(10px,2vw,20px);overflow:clip}
+.orb{position:absolute;left:50%;bottom:-40%;width:clamp(300px,52vw,640px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 38% 24%,#fff 0,#e9e8e3 28%,#b1b0aa 60%,#3b3b39 100%);animation:rise 1.2s ease .3s both}
+.orb::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(rgba(0,0,0,.18) 1px,transparent 1.4px) 0 0/9px 9px;-webkit-mask:linear-gradient(180deg,transparent 30%,#000);mask:linear-gradient(180deg,transparent 30%,#000)}
+.pn{position:absolute;display:flex;align-items:center;gap:12px;padding:13px 20px 13px 13px;border-radius:22px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--sh);font-size:.85rem;line-height:1.3;transform:rotate(var(--r,0deg));animation:pop .9s cubic-bezier(.2,1.2,.4,1) var(--d,.8s) both,bob 5s ease-in-out calc(var(--d,.8s) + 1s) infinite alternate;text-align:left}
+.pn b{display:block;font:500 1.1rem var(--s)}.pn small{color:var(--mut);font-size:.78rem}
+.pn i{flex:none;width:40px;height:40px;border-radius:13px;background:var(--c)}
+@keyframes pop{from{opacity:0;transform:translateY(60px) rotate(calc(var(--r,0deg) - 14deg)) scale(.6)}}
+@keyframes bob{to{translate:0 -10px}}
+.p1{left:24%;top:16%;--r:-7deg;--c:var(--lime)}.p2{left:31%;top:52%;--r:-3deg;--c:var(--lav);--d:1s}.p3{right:22%;top:30%;--r:7deg;--c:var(--pea);--d:1.2s}
+.ti{position:absolute;width:clamp(70px,13vw,150px);aspect-ratio:3/4;border-radius:22px;box-shadow:var(--sh);overflow:hidden;transform:rotate(var(--r));animation:pop 1s ease 1.1s both}
+.t1{left:12%;top:36%;--r:-10deg;background:linear-gradient(160deg,#e8e8e4,#7c7c78)}.t2{right:11%;top:48%;--r:9deg;background:#141414}
+.t1::after{content:"";position:absolute;left:-10%;right:-10%;bottom:0;height:62%;background:#1c1c1c;clip-path:polygon(0 100%,38% 18%,58% 55%,74% 32%,100% 100%)}
+.t2::after{content:"";position:absolute;width:46%;aspect-ratio:1;border-radius:50%;left:27%;top:28%;background:radial-gradient(circle at 35% 30%,#fff,#9b9b97 60%,#3a3a38)}
+.fc{position:absolute;width:clamp(170px,19vw,230px);padding:20px;border-radius:28px;background:#fff;box-shadow:var(--sh);text-align:left;transform:rotate(var(--r));animation:pop 1s cubic-bezier(.2,1.2,.4,1) .9s both,bob 6s ease-in-out 2s infinite alternate}
+.fc h3{font-size:1.35rem;line-height:1.05;margin:16px 0 8px}.fc p{margin:0;font-size:.82rem;color:var(--mut);line-height:1.4}
+.fc.l{left:1%;top:clamp(230px,26vw,360px);--r:-6deg}.fc.r{right:1%;top:clamp(260px,29vw,400px);--r:6deg;animation-delay:1.1s,2.4s}
+.wv{display:flex;gap:3px;align-items:center;height:22px}.wv i{width:3px;border-radius:3px;background:var(--ink)}
+.av3{display:flex}.av3 i{width:32px;height:32px;border-radius:50%;border:2px solid #fff;margin-left:-8px;background:linear-gradient(135deg,#ddd,#777);font:500 .72rem/28px var(--s);color:#fff;text-align:center;font-style:normal}.av3 i:first-child{margin:0}
+.crv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.crv path{fill:none;stroke:rgba(0,0,0,.2);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:900;stroke-dashoffset:900;animation:dr 2.4s ease 1.4s forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.bdg{position:absolute;right:3%;top:clamp(30px,6vw,90px);width:clamp(70px,9vw,104px);aspect-ratio:1;display:grid;place-items:center;animation:rise 1s ease 1.2s both}
+.bdg svg{width:100%;height:100%;animation:spin 22s linear infinite}.bdg b{position:absolute;font-size:1.5rem}
 @keyframes spin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.badge .rot{animation:none}}
-/* sheet */
-.sheet{position:relative;z-index:2;background:var(--sheet);color:var(--ink);border-radius:clamp(24px,4vw,44px) clamp(24px,4vw,44px) 0 0;margin-top:calc(-1*clamp(60px,9vw,110px));padding:clamp(18px,3vw,36px) max(clamp(14px,3vw,36px),calc((100% - 1240px)/2)) clamp(36px,5vw,60px)}
-.sheet h2{font-size:clamp(1.6rem,4.4vw,3.2rem);text-align:center;margin:clamp(34px,5vw,56px) 0 22px}
-.sub{text-align:center;max-width:520px;margin:-8px auto 26px}
-.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;position:relative}
-.cd{background:var(--card);border-radius:28px;padding:clamp(18px,2.4vw,28px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
-.cd h3{font-size:clamp(1.15rem,2.2vw,1.6rem);line-height:.95}
-.cd p{margin:0;font-size:.85rem;opacity:.8}
-.mini{margin-top:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;padding-top:10px}
-.bl{background:var(--b);color:#fff;border-radius:99px;padding:10px 20px;font-weight:800;font-size:.95rem}
-.lm2{background:var(--lime);color:#0b0b0b;border-radius:99px;padding:8px 18px;font-weight:900;font-size:.95rem}
-.bub{background:var(--lime);color:#0b0b0b;border-radius:28px 28px 28px 4px;padding:12px 22px;font-weight:800;line-height:1.2;text-align:left}
-.bub b{display:block;font-size:1.5rem;font-stretch:125%;font-weight:900}
-.sq{width:44px;height:44px;border-radius:50%;background:var(--b);border:3px solid var(--lime)}
-/* people & events */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:16px}
-.pc{background:var(--card);border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:12px}
-.top1{display:flex;gap:12px;align-items:center}
-.av{flex:none;width:60px;height:60px;border-radius:50%;background:var(--b);color:#fff;display:grid;place-items:center;font-weight:900;font-size:1.2rem;border:3px solid var(--lime)}
-.pc:nth-child(3n+2) .av{background:var(--lime);color:#0b0b0b;border-color:var(--b)}
-.pc h3{font-size:1.05rem;line-height:1.05}
-.pc small{opacity:.7;font-weight:500}
-.tg{display:flex;flex-wrap:wrap;gap:6px}
-.tg span{font-size:.75rem;font-weight:700;border:1.5px solid var(--line);border-radius:99px;padding:3px 11px}
-.pc .row{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:6px}
-.btn{border:0;cursor:pointer;font:900 .85rem var(--f);background:var(--lime);color:#0b0b0b;border-radius:99px;padding:10px 20px}
-.btn:hover{background:var(--b);color:#fff}
-.ev{align-items:flex-start;text-align:left}
-.dtb{background:var(--lime);color:#0b0b0b;border-radius:22px 22px 22px 4px;padding:10px 18px;font-weight:900;font-stretch:125%;font-size:1.7rem;line-height:1}
-.dtb small{display:block;font-size:.65rem;opacity:1;font-weight:800}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px}
-.chip{font:700 .9rem var(--f);color:var(--ink);background:transparent;border:2px solid var(--line);border-radius:99px;padding:8px 20px;cursor:pointer}
-.chip.on{background:var(--b);color:#fff;border-color:var(--b)}
-.num{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;font-stretch:125%;color:var(--b);line-height:1}
-details{background:var(--card);border-radius:22px;padding:16px 22px;margin-bottom:10px}
-summary{font-weight:800;cursor:pointer}details p{margin:10px 0 0}
-form{display:grid;gap:12px;max-width:520px;margin:auto}
-input,select,textarea{width:100%;font:500 1rem var(--f);padding:15px 20px;border-radius:99px;border:2px solid transparent;background:var(--card);color:var(--ink)}
-textarea{border-radius:24px}
-.ok{display:none;background:var(--lime);color:#0b0b0b;font-weight:800;border-radius:20px;padding:14px;text-align:center;margin-top:10px}
-dialog{border:0;border-radius:32px;background:var(--b);color:#fff;padding:26px;width:min(92vw,440px)}
-dialog::backdrop{background:rgba(3,10,60,.7)}
-dialog h3{font-size:1.5rem;line-height:1;margin-bottom:8px}dialog p{margin:0 0 14px}
-dialog input{background:#fff;color:#0b0b0b}
-.x{float:right;border:2px solid #fff;background:transparent;color:#fff;border-radius:50%;width:36px;height:36px;font-weight:800;cursor:pointer}
-footer{background:var(--b);padding:30px max(clamp(16px,4vw,44px),calc((100% - 1240px)/2)) 26px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));font-size:.9rem}
-footer a{display:block;margin:4px 0}footer b{font-weight:900;font-stretch:125%;text-transform:uppercase}
-footer .sos{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.3);padding-top:14px;opacity:.85}
-@media(max-width:700px){.a2,.g2{display:none}.g1{top:68%;right:2%}.badge{left:-2%;right:auto;top:72%}}
-.more{font-weight:800;font-size:.85rem;color:var(--ink);text-underline-offset:3px}
-.d h1{font-size:clamp(1.8rem,7.4vw,5.2rem);line-height:.95}
-.dl{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;align-items:start;margin-top:6px}
-.dl>.col{display:grid;gap:16px}
+.tr,.nt{position:absolute;bottom:clamp(30px,5vw,70px);font-size:.85rem;color:var(--mut);text-align:left;z-index:2}
+.tr{left:2%;max-width:200px}.tr::before,.nt::before{content:"";display:block;width:26px;border-top:1px solid var(--mut);margin-bottom:10px}.tr .av3{margin-top:12px}.nt{right:3%;max-width:160px}
+@media(max-width:1000px){.fc,.crv{display:none}.tr,.nt{display:none}.p1{left:6%}.p2{left:12%}.p3{right:6%}.t1{left:3%}.t2{right:2%}.bdg{display:none}}
+@media(max-width:560px){.pn{font-size:.72rem;padding:9px 14px 9px 9px}.pn i{width:30px;height:30px;border-radius:10px}.pn b{font-size:.95rem}.p1{top:6%}.p2{top:40%}.p3{top:22%}.ti{display:none}}
+/* sheet sections */
+.sheet{max-width:1240px;margin:auto;padding:clamp(24px,4vw,56px) clamp(16px,4vw,40px)}
+.sheet h2{font-size:clamp(2rem,5vw,3.6rem);text-align:center;margin:clamp(40px,6vw,80px) 0 14px}
+.sheet h2:first-child{margin-top:10px}
+.sub{text-align:center;color:var(--mut);max-width:480px;margin:0 auto 30px}
+.top{text-align:center;padding:clamp(24px,5vw,60px) clamp(16px,4vw,40px) 0;max-width:1240px;margin:auto}
+.top h1{font-size:clamp(2.4rem,8vw,6rem);line-height:.98;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}.top h1+h1{animation-delay:.12s}
+.d h1{font-size:clamp(2.2rem,6.4vw,4.8rem)}.top .lead{animation:rise .8s ease .3s both}
+.big{position:relative;display:block}
+.pl{display:inline-block;font:600 .85rem var(--f);text-decoration:none;padding:9px 18px;border-radius:99px;border:1px solid var(--ln);background:#fff}
+.glass{position:absolute;right:2%;top:-10%;width:clamp(110px,15vw,170px);padding:14px;border-radius:24px;background:#fff;box-shadow:var(--sh);font:600 .85rem/1.3 var(--f);text-align:center;transform:rotate(7deg);animation:pop 1s ease .8s both}
+.glass small{display:block;color:var(--mut);font-weight:400}
+.glass .ph{width:52px;height:52px;margin:0 auto 8px;border-radius:50%;background:linear-gradient(135deg,#ddd,#777);color:#fff;display:grid;place-items:center;font:500 1.2rem var(--s)}
+@media(max-width:800px){.glass{display:none}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.cd,.pc,details{background:#fff;border-radius:28px;box-shadow:var(--sh);border:1px solid rgba(0,0,0,.04)}
+.cd{padding:clamp(20px,3vw,30px);display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center}
+.cd h3{font-size:1.5rem}.cd p{margin:0;color:var(--mut);font-size:.92rem}
+.num{display:inline-block;font:500 clamp(2.8rem,6vw,4.4rem)/1 var(--s);letter-spacing:-.03em}.num.pop{animation:np .5s ease-out}
+@keyframes np{40%{transform:scale(1.12)}}
+.stp{align-items:flex-start;text-align:left}.stp .num{font-style:italic;color:var(--mut)}
+.pc{padding:22px;display:flex;flex-direction:column;gap:14px}
+.top1{display:flex;gap:14px;align-items:center}
+.av{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font:500 1.3rem var(--s);color:#fff;background:linear-gradient(135deg,#cfcfca,#5d5d5a)}
+.pc:nth-child(3n+2) .av{background:linear-gradient(135deg,var(--lime),#8ab11c);color:#121212}
+.pc:nth-child(3n) .av{background:linear-gradient(135deg,var(--lav),#6a52d8)}
+.pc h3{font-size:1.4rem}.pc small{color:var(--mut)}
+.tg{display:flex;flex-wrap:wrap;gap:6px}.tg span{font-size:.76rem;font-weight:500;border:1px solid var(--ln);border-radius:99px;padding:4px 12px}
+.pc .row{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.btn{border:0;cursor:pointer;font:600 .85rem var(--f);background:var(--ink);color:#fff;border-radius:99px;padding:11px 22px;transition:transform .2s}.btn:hover{transform:translateY(-2px)}
+.bl{border:1px solid var(--ln);border-radius:99px;padding:6px 14px;font-weight:700;font-size:.85rem}
+.lm2{background:var(--lime);color:#121212;border-radius:99px;padding:6px 16px;font-weight:700;font-size:.85rem}
+.more{font-weight:600;font-size:.85rem;text-underline-offset:4px}
+.ev{align-items:flex-start}.dtb{background:var(--bg);border-radius:20px;padding:10px 18px;font:500 2rem/1 var(--s);text-align:center}.dtb small{display:block;font:600 .72rem var(--f);color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:26px}
+.chip{font:600 .88rem var(--f);color:var(--ink);background:#fff;border:1px solid var(--ln);border-radius:99px;padding:9px 20px;cursor:pointer}.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+details{padding:18px 24px;margin-bottom:10px}summary{font-weight:600;cursor:pointer}details p{margin:10px 0 0;color:var(--mut)}
+.band{background:var(--ink);color:#fff;border-radius:36px;text-align:center;padding:clamp(36px,6vw,80px) 20px;margin-top:clamp(40px,6vw,80px)}
+.band h2{margin:0 0 20px!important;font-size:clamp(2rem,5.4vw,4rem)}.band .bt{background:#fff}
+/* detail */
+.dl{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;align-items:start}.dl>.col{display:grid;gap:16px}
 @media(max-width:860px){.dl{grid-template-columns:1fr}.bk{position:static!important}}
-.tl{align-items:flex-start;text-align:left}
-.tl p{opacity:1;font-size:1rem}
+.tl{align-items:flex-start;text-align:left}.tl p{color:var(--ink);font-size:1rem}
 .tl ul,.tl ol{margin:0;padding-left:20px;display:grid;gap:8px}
-.bk{background:var(--b);color:#fff;position:sticky;top:84px}
-.bk p{opacity:.92;color:#fff}
-.tg2{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.bk .chip{color:#fff;border-color:#fff;padding:7px 14px;font-size:.82rem}
-.bk .chip.on{background:var(--lime);color:#0b0b0b;border-color:var(--lime)}
-.bk .btn{padding:14px 26px;font-size:1rem}
-.bk .btn:hover{background:#fff}
-.bar{width:100%;height:12px;border-radius:99px;background:rgba(255,255,255,.25);overflow:hidden}.bar i{display:block;height:100%;background:var(--lime)}
-.dg{top:-14%;right:-10%;left:auto;bottom:auto;width:clamp(100px,16vw,190px);transform:rotate(10deg)}
-@media(max-width:700px){.dg{display:none}}
-.st3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
-.st3 .cd{justify-content:center}
-.big h1{animation:slam .8s cubic-bezier(.2,1.4,.4,1) both}
-.big h1:nth-of-type(2){animation-delay:.12s}.big h1:nth-of-type(3){animation-delay:.24s}
-@keyframes slam{from{opacity:0;transform:translateY(70px) scale(.92) rotate(-3deg)}}
-.glass{transform:rotate(var(--r,0deg));animation:fly .9s cubic-bezier(.2,1.3,.4,1) .7s both,bob 4s ease-in-out 1.8s infinite alternate}
-.g2{animation-delay:.9s,2.2s}.dg{--r:10deg}
-@keyframes fly{from{opacity:0;transform:translateY(140px) rotate(calc(var(--r,0deg) + 50deg)) scale(.3)}to{opacity:1;transform:translateY(0) rotate(var(--r,0deg)) scale(1)}}
-@keyframes bob{to{translate:0 -12px}}
-.arr path{stroke-dasharray:340;stroke-dashoffset:340;animation:draw 1s ease-out 1.2s forwards}.a2 path{animation-delay:1.45s}
-@keyframes draw{to{stroke-dashoffset:0}}
-.badge{animation:pop .8s cubic-bezier(.2,1.6,.4,1) 1.3s both}
-@keyframes pop{from{opacity:0;transform:scale(0) rotate(-120deg)}}
-.top>.lead,.top>.pl{animation:up .6s ease-out .5s both}
-#home .top>.lead,#home .top>.pl{animation-delay:1.1s}
-@keyframes up{from{opacity:0;transform:translateY(24px)}}
-.rv{opacity:0;transform:translateY(46px) rotate(var(--rr,-2deg)) scale(.92);transition:opacity .6s ease,transform .8s cubic-bezier(.2,1.4,.4,1);transition-delay:var(--d,0s)}
-.rv.in{opacity:1;transform:none}
-.num{display:inline-block}.num.pop{animation:numpop .5s ease-out}
-@keyframes numpop{40%{transform:scale(1.25) rotate(-3deg)}}
-@media(prefers-reduced-motion:reduce){.big h1,.glass,.badge,.top>.lead,.top>.pl,.num.pop{animation:none!important}.arr path{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}}
+.bk{background:var(--ink);color:#fff;position:sticky;top:90px;align-items:flex-start;text-align:left}
+.bk h3{font-size:2.4rem}.bk p{color:#cfcfca}
+.tg2{display:flex;flex-wrap:wrap;gap:8px}
+.bk .chip{background:transparent;color:#fff;border-color:rgba(255,255,255,.35);padding:8px 16px;font-size:.8rem}.bk .chip.on{background:var(--lime);color:#121212;border-color:var(--lime)}
+.bk .btn{background:#fff;color:#121212;padding:14px 26px;font-size:.95rem}
+.bar{width:100%;height:8px;border-radius:99px;background:rgba(255,255,255,.2);overflow:hidden}.bar i{display:block;height:100%;background:var(--lime)}
+.st3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}.st3 .cd{justify-content:center}
+/* forms */
+form{display:grid;gap:12px;max-width:520px;margin:auto}
+input,select,textarea{width:100%;font:500 1rem var(--f);padding:15px 20px;border-radius:99px;border:1px solid var(--ln);background:#fff;color:var(--ink)}textarea{border-radius:24px}
+.ok{display:none;background:var(--lime);font-weight:600;border-radius:20px;padding:14px;text-align:center;margin-top:10px}
+dialog{border:0;border-radius:30px;background:#fff;color:var(--ink);padding:28px;width:min(92vw,440px);box-shadow:0 40px 90px -20px rgba(0,0,0,.4)}
+dialog::backdrop{background:rgba(20,20,20,.45);backdrop-filter:blur(4px)}
+dialog h3{font-size:1.9rem;margin-bottom:8px}dialog p{margin:0 0 16px;color:var(--mut)}
+.x{float:right;border:1px solid var(--ln);background:#fff;border-radius:50%;width:36px;height:36px;font-size:1.1rem;cursor:pointer}
+footer{max-width:1240px;margin:clamp(30px,5vw,60px) auto 0;padding:34px clamp(16px,4vw,40px) 30px;border-top:1px solid var(--ln);display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));font-size:.9rem;color:var(--mut)}
+footer a{display:block;margin:5px 0;text-decoration:none}footer b{color:var(--ink);font:600 1.15rem var(--s)}
+footer .sos{grid-column:1/-1;border-top:1px solid var(--ln);padding-top:16px}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.9,.3,1);transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1;transform:none;transition:none}.crv path{stroke-dashoffset:0}}
 </style>
 </head>
 <body>
-<div class="frame">
 <header>
-<a class="logo" href="#home" aria-label="Alchemy Circle home"><b>Alchemy</b><i>Circle</i></a>
-<nav id="nv"><a class="pl" href="#home">Home</a><a class="pl" href="#therapists">Therapists</a><a class="pl" href="#events">Events</a><a class="pl" href="#about">About</a><a class="pl" href="#contact">Contact</a></nav>
-<a class="pl big" href="#therapists">Book a session</a>
-<button class="pl" id="mb" aria-expanded="false" aria-controls="nv">Menu</button>
+<a class="logo" href="#home">Alchemy Circle<sup>°</sup></a>
+<nav id="nv"><a href="#home">Home</a><a href="#therapists">Therapists</a><a href="#events">Events</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<a class="bt dk" href="#therapists">Book a session <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12L12 4M5 4h7v7"/></svg></a>
+<button class="bt" id="mb" aria-expanded="false" aria-controls="nv">Menu</button>
 </header>
 <main>
 <section class="page" id="home">
-<div class="top"><div class="big"><h1><span class="hash">#</span>Circle</h1><h1>Talk to</h1><h1>Someone</h1>
-<svg class="arr a1" viewBox="0 0 140 120" aria-hidden="true"><path d="M8 100 C 10 20, 90 -4, 118 50 M96 52 L120 56 L128 30"/></svg>
-<svg class="arr a2" viewBox="0 0 140 120" aria-hidden="true"><path d="M8 100 C 10 20, 90 -4, 118 50 M96 52 L120 56 L128 30"/></svg>
-<div class="glass g1"><div class="ph">MI</div>meera.iyer<small>Anxiety · 4.9 rated</small></div>
-<div class="glass g2"><div class="ph">AK</div>arjun.kapoor<small>Relationships · 4.8</small></div>
-<div class="badge"><svg class="rot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="100" fill="#b6f500"/><path id="cp" fill="none" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/><text font-size="15" font-weight="900" letter-spacing="1.5" fill="#0b0b0b"><textPath href="#cp">FIRST CALL FREE • FIRST CALL FREE • </textPath></text></svg><svg class="sc" viewBox="0 0 60 60" aria-hidden="true"><path d="M8 48 C 8 20, 40 8, 44 28 C 46 40, 24 42, 30 28 C 34 20, 48 22, 52 14"/></svg></div>
+<div class="hero">
+<h1 class="hd"><span>A lighter mind,</span><em>with someone beside you.</em></h1>
+<p class="lead">Alchemy Circle connects you with verified therapists across India and small, kind group circles, all in one calm space.</p>
+<div class="cta"><a class="bt dk" href="#therapists">Find a therapist <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="bt" href="#events"><span class="pi"></span>See events</a></div>
+<svg class="crv" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true"><path d="M170 420 C 170 560, 330 600, 430 640"/><path d="M1040 520 C 1030 620, 900 600, 820 640"/></svg>
+<div class="fc l"><div class="wv" aria-hidden="true"><i style="height:8px"></i><i style="height:18px"></i><i style="height:12px"></i><i style="height:22px"></i><i style="height:10px"></i></div><h3>Talk it out, without the pressure.</h3><p>Book a free 15-minute intro call and see if it feels right.</p></div>
+<div class="fc r"><div class="av3" aria-hidden="true"><i>M</i><i>A</i><i>N</i></div><h3>Circles, every week.</h3><p>Small groups with trained hosts, online and in person.</p></div>
+<div class="bdg" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="cp" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text font-size="10.5" letter-spacing="2.4" fill="#121212"><textPath href="#cp">A LIGHTER MIND • EVERY DAY • </textPath></text></svg><b>✦</b></div>
+<div class="stage">
+<div class="orb"></div>
+<div class="ti t1"></div><div class="ti t2"></div>
+<div class="pn p1"><i></i><div><b>Breathe</b><small>Slow down, count to four.</small></div></div>
+<div class="pn p2"><i></i><div><b>Reflect</b><small>Name what you feel.</small></div></div>
+<div class="pn p3"><i></i><div><b>Heal</b><small>One small step today.</small></div></div>
+<div class="tr">Trusted by 5,000+ people across India.<div class="av3" aria-hidden="true"><i>R</i><i>S</i><i>K</i><i>+</i></div></div>
+<div class="nt">Less noise.<br>More calm.</div>
 </div>
-<p class="lead">Verified therapists across India. Small, kind group circles. Start with a free 15-minute intro call.</p>
-<a class="pl big lm" href="#therapists">Find a therapist</a> <a class="pl big" href="#events">See events</a></div>
+</div>
 <div class="sheet">
-<div class="g3">
-<div class="cd"><h3>Pick a<br>therapist</h3><p>Filter by topic, language and budget.</p><div class="mini"><span class="bl">meera.iyer</span><span class="lm2">₹1,200</span></div></div>
-<div class="cd"><h3>Choose<br>your slot</h3><p>Video, audio or chat. Reschedule anytime.</p><div class="mini"><span class="bl">Tue 18 Nov, 7 PM</span><span class="sq"></span></div></div>
-<div class="cd"><h3>Join a<br>circle</h3><p>Small groups with trained hosts.</p><div class="mini"><div class="bub">Next circle<b>22 Nov</b></div></div></div>
-</div>
-<h2>Meet the people</h2><p class="sub">A few of the therapists you could talk to this week.</p><div class="grid" id="feat"></div>
-<p style="text-align:center;margin-top:26px"><a class="pl big lm" href="#therapists" style="color:#0b0b0b">See everyone</a></p>
-<div class="g3" style="margin-top:50px"><div class="cd"><span class="num">120+</span><p>vetted therapists</p></div><div class="cd"><span class="num">12</span><p>languages</p></div><div class="cd"><span class="num">40+</span><p>events a month</p></div></div>
+<div class="g3"><div class="cd"><span class="num">120+</span><p>vetted therapists</p></div><div class="cd"><span class="num">12</span><p>languages spoken</p></div><div class="cd"><span class="num">40+</span><p>events every month</p></div></div>
+<h2>Meet the people <em>you could talk to</em></h2><p class="sub">Every profile is checked for licence and experience before it goes live.</p>
+<div class="grid" id="feat"></div>
+<p style="text-align:center;margin-top:28px"><a class="bt dk" href="#therapists">See all therapists</a></p>
+<h2>How it <em>works</em></h2>
+<div class="g3"><div class="cd stp"><span class="num">1</span><h3>Tell us what’s up</h3><p>Pick a topic, a language and a budget.</p></div><div class="cd stp"><span class="num">2</span><h3>Meet your match</h3><p>Browse profiles and book a free 15-minute intro call.</p></div><div class="cd stp"><span class="num">3</span><h3>Show up</h3><p>Video, audio or chat. Reschedule anytime.</p></div></div>
+<h2>Upcoming <em>circles</em></h2><div class="grid" id="hev"></div>
+<div class="band"><h2>Your first call is free.</h2><a class="bt" href="#therapists">Find a therapist</a></div>
 </div></section>
 
-<section class="page" id="therapists"><div class="top s"><div class="big"><h1>Find your</h1><h1><span class="hash">#</span>Therapist</h1></div><p class="lead">Every profile is checked for licence and experience before it goes live.</p></div>
+<section class="page" id="therapists"><div class="top s"><h1>Find your</h1><h1><em>therapist.</em></h1><p class="lead">Filter by what you’re going through, and book a free intro call.</p></div>
 <div class="sheet"><div class="chips" id="chips"></div><div class="grid" id="tgrid"></div></div></section>
 
-<section class="page" id="events"><div class="top s"><div class="big"><h1>Join a</h1><h1><span class="hash">#</span>Circle</h1></div><p class="lead">Workshops, support circles and open talks. Small groups, kind hosts.</p></div>
+<section class="page" id="events"><div class="top s"><h1>Join a</h1><h1><em>circle.</em></h1><p class="lead">Workshops, support circles and open talks. Small groups, kind hosts.</p></div>
 <div class="sheet"><div class="grid" id="egrid"></div></div></section>
 
-<section class="page" id="about"><div class="top s"><div class="big"><h1>Our</h1><h1><span class="hash">#</span>Story</h1></div><p class="lead">Good therapy shouldn’t depend on your city or your savings.</p></div>
-<div class="sheet"><p style="max-width:640px;margin:20px auto 0;font-size:1.1rem;text-align:center">Finding a therapist in India felt like guesswork, so we built one place for vetted professionals and warm community spaces. Asking for help should take minutes, not months.</p>
-<h2>Questions people ask</h2><div style="max-width:720px;margin:auto">
+<section class="page" id="about"><div class="top s"><h1>Good therapy,</h1><h1><em>closer to home.</em></h1><p class="lead">It shouldn’t depend on your city or your savings.</p></div>
+<div class="sheet"><p style="max-width:620px;margin:0 auto;font-size:1.1rem;text-align:center;color:var(--mut)">Finding a therapist in India felt like guesswork, so we built one place for vetted professionals and warm community spaces. Asking for help should take minutes, not months.</p>
+<h2>Questions <em>people ask</em></h2><div style="max-width:720px;margin:auto">
 <details><summary>Are sessions confidential?</summary><p>Yes. What you share stays between you and your therapist, except where the law requires otherwise or someone is in immediate danger.</p></details>
 <details><summary>How much does a session cost?</summary><p>Prices are on each profile. Intro calls are free, and some therapists offer sliding-scale slots.</p></details>
 <details><summary>Can I switch therapists?</summary><p>Anytime. It often takes a couple of tries to find the right fit.</p></details>
 <details><summary>Is this for emergencies?</summary><p>No. In a crisis, call Tele-MANAS at 14416 (free, 24×7) or your local emergency number.</p></details></div></div></section>
 
-<section class="page" id="contact"><div class="top s"><div class="big"><h1>Say</h1><h1><span class="hash">#</span>Hello</h1></div></div>
-<div class="sheet"><form id="cf"><input required placeholder="Your name" aria-label="Name"><input required type="email" placeholder="Email" aria-label="Email"><select aria-label="Topic"><option>I need a therapist</option><option>I’m a therapist and want to join</option><option>Event partnership</option></select><textarea rows="4" placeholder="Anything you’d like us to know" aria-label="Message"></textarea><button class="btn" style="padding:15px" type="submit">Send message</button><div class="ok" id="cok">Sent. We’ll reply within 2 working days.</div></form></div></section>
-<section class="page" id="detail"></section></main>
+<section class="page" id="contact"><div class="top s"><h1>Say</h1><h1><em>hello.</em></h1></div>
+<div class="sheet"><form id="cf"><input required placeholder="Your name" aria-label="Name"><input required type="email" placeholder="Email" aria-label="Email"><select aria-label="Topic"><option>I need a therapist</option><option>I’m a therapist and want to join</option><option>Event partnership</option></select><textarea rows="4" placeholder="Anything you’d like us to know" aria-label="Message"></textarea><button class="bt dk" type="submit">Send message</button><div class="ok" id="cok">Sent. We’ll reply within 2 working days.</div></form></div></section>
+<section class="page" id="detail"></section>
+</main>
 <footer><div><b>Alchemy Circle</b><br>Mental health care and community, built for India.</div><div><b>Explore</b><a href="#therapists">Therapists</a><a href="#events">Events</a><a href="#about">About</a><a href="#contact">Contact</a></div><div><b>Reach us</b>hello@alchemycircle.in</div><div class="sos">Alchemy Circle is not an emergency service. In crisis? Call Tele-MANAS 14416 (free, 24×7).</div></footer>
-</div>
-<dialog id="dg"><button class="x" id="dx" aria-label="Close">×</button><h3 id="dt">Book</h3><p id="ds"></p><form id="df"><input required placeholder="Your name" aria-label="Name"><input required type="email" placeholder="Email" aria-label="Email"><button class="btn" style="padding:14px" type="submit">Confirm</button></form><div class="ok" id="dok">You’re in! Check your email for details.</div></dialog>
+<dialog id="dg"><button class="x" id="dx" aria-label="Close">×</button><h3 id="dt">Book</h3><p id="ds"></p><form id="df"><input required placeholder="Your name" aria-label="Name"><input required type="email" placeholder="Email" aria-label="Email"><button class="bt dk" type="submit">Confirm</button></form><div class="ok" id="dok">You’re in! Check your email for details.</div></dialog>
 <script>
 var T=[["Dr. Meera Iyer","Anxiety","Panic, overthinking","English, Hindi, Tamil","Bengaluru",1200],["Arjun Kapoor","Relationships","Couples, breakups","English, Hindi","Delhi",1000],["Naina Shah","Trauma","Trauma, grief","English, Gujarati","Mumbai",1500],["Zoya Khan","Teens","Teens, exam stress","English, Hindi, Urdu","Hyderabad",800],["Dr. Rohan Nair","Anxiety","Burnout, work stress","English, Malayalam","Kochi",1100],["Ishita Rao","Relationships","Family, self-worth","English, Kannada","Mysuru",700],["Kabir Sethi","Trauma","Grief, loss","English, Hindi, Punjabi","Chandigarh",900],["Ananya Das","Teens","Identity, LGBTQ+ affirming","English, Bengali","Kolkata",850]];
 var E=[["22","Nov","Sleep & stress reset","Online workshop, 90 min","Free"],["28","Nov","Burnout support circle","Delhi, in person","₹400"],["05","Dec","Open mic: say it out loud","Mumbai, in person","₹300"],["12","Dec","Healthy boundaries","Online, 60 min","Free"],["19","Dec","Grief & remembering","Bengaluru, in person","₹500"],["03","Jan","New year, no pressure","Online circle","Free"]];
@@ -206,21 +202,26 @@ function chips(f){$("#chips").innerHTML=["All","Anxiety","Relationships","Trauma
 chips("All");$("#feat").innerHTML=T.slice(0,4).map(card).join("");
 function evc(e,k){return '<div class="pc ev"><div class="dtb"><small>'+e[1]+'</small>'+e[0]+'</div><h3><a href="#event-'+k+'" style="text-decoration:none;color:inherit">'+e[2]+'</a></h3><small>'+e[3]+'</small><div class="row" style="width:100%"><span class="bl">'+e[4]+'</span><button class="btn" data-b="'+e[2]+'|'+e[3]+' · '+e[0]+' '+e[1]+'">Join</button></div><a class="more" href="#event-'+k+'">Event details</a></div>'}
 $("#egrid").innerHTML=E.map(evc).join("");
+$("#hev").innerHTML=[0,1,2].map(function(k){return evc(E[k],k)}).join("");
 var SL=["10:00 AM","12:30 PM","4:00 PM","7:30 PM"];
 var DT=[["9 years","M.Phil. Clinical Psychology","Meera works with people whose mind won’t switch off. We map what sets off the spiral, then build small habits you can use the same day.",["CBT","Mindfulness","Grounding skills"],"Tue, Thu, Sat"],["11 years","M.A. Counselling Psychology","Arjun helps partners and ex-partners say the hard thing without it turning into a fight. Expect honest, steady sessions, solo or as a couple.",["Couples therapy","Attachment work","Communication"],"Mon, Wed, Fri"],["13 years","M.Phil. Clinical Psychology","Naina specialises in trauma and loss. The pace is yours: nothing gets opened until you say you’re ready.",["EMDR","Trauma-informed care","Grief work"],"Tue, Fri, Sun"],["6 years","M.Sc. Child Psychology","Zoya talks with teens in plain language, with no lectures. Parents hear only what the teen agrees to share.",["Talk therapy","Study skills","Parent guidance"],"Mon, Thu, Sat"],["10 years","Ph.D. Psychology","Rohan helps high performers who are running on empty. We look at workload, sleep and the stories you tell yourself about rest.",["CBT","Burnout recovery","Sleep hygiene"],"Wed, Fri, Sun"],["7 years","M.A. Counselling Psychology","Ishita works on family expectations and self-worth, especially when love and pressure arrive together.",["Person-centred","Family systems","Journaling"],"Mon, Tue, Sat"],["8 years","M.A. Clinical Psychology","Kabir sits with grief without hurrying it. Sessions can be quiet, and that’s fine.",["Grief counselling","Narrative therapy","Mindfulness"],"Thu, Sat, Sun"],["5 years","M.Sc. Psychology","Ananya runs an affirming space for young people exploring identity, in Bengali, English or a mix of both.",["Affirmative therapy","Talk therapy","Peer circles"],"Tue, Wed, Sat"]];
 var DE=[["7:00–8:30 PM IST","Dr. Rohan Nair",14,30,"A hands-on session on why your mind races at night and what to do about it. You’ll leave with a wind-down routine you can start tonight.",["Why stress steals sleep","Practise a 10-minute wind-down","Build your own routine"],"A notebook and a quiet corner."],["5:00–7:00 PM","Arjun Kapoor",8,15,"A small circle for people who are tired in a way sleep doesn’t fix. Share what you’re carrying, listen to others and leave with one thing to try this week.",["Check-in round","Talking about what drains you","One change for the week"],"Nothing. Chai is on us."],["6:00–8:00 PM","Naina Shah",20,40,"An evening for saying the thing you usually keep inside. Speak, or just listen. Nobody is graded and nothing leaves the room.",["Ground rules","Open mic, 5 minutes each","Closing circle"],"Something to say, or nothing at all."],["8:00–9:00 PM IST","Ishita Rao",25,50,"Practical scripts and exercises for saying no, asking for space and holding your ground with family, friends and work.",["What boundaries are","Role-play with scripts","Q&A"],"A situation you want to practise."],["4:00–6:00 PM","Kabir Sethi",6,12,"A gentle, slow circle for anyone missing someone. Bring a name, a story or a photograph, or just come and sit.",["Opening silence","Remembering aloud","Closing ritual"],"A photo or object, if you like."],["7:30–8:30 PM IST","Dr. Meera Iyer",40,60,"Set one small, kind intention for the year instead of a crushing list. Calm, practical and a little bit fun.",["Look back kindly","Pick one intention","Make it tiny"],"A pen and your honest mood."]];
 function detail(type,i){var el=$("#detail"),h;
-if(type=="therapist"){var t=T[i],d=DT[i];if(!t||!d)return false;var f=t[0].replace("Dr. ","").split(" ")[0],r=(4.7+(i*3%4)/10).toFixed(1);
+if(type=="therapist"){var t=T[i],d=DT[i];if(!t||!d)return false;var f=t[0].replace("Dr. ","").split(" ")[0],r=(4.6+(i*3%4)/10).toFixed(1);
 h='<div class="top s d"><a class="pl" href="#therapists">Back to therapists</a><div class="big" style="margin-top:24px"><h1>'+t[0]+'</h1><div class="glass dg"><div class="ph">'+ini(t[0])+'</div>'+r+' rated<small>'+t[4]+'</small></div></div><p class="lead">'+t[2]+'</p></div><div class="sheet"><div class="dl"><div class="col"><div class="cd tl"><h3>About '+f+'</h3><p>'+d[2]+'</p></div><div class="cd tl"><h3>How we’ll work</h3><div class="tg">'+d[3].map(function(a){return '<span>'+a+'</span>'}).join("")+'</div></div><div class="cd tl"><h3>Good fit if</h3><ul><li>You’re dealing with '+t[2].toLowerCase()+'</li><li>You want practical steps, not just a listening ear</li><li>You’re comfortable in '+t[3]+'</li></ul></div><div class="st3"><div class="cd"><span class="num">'+d[0].split(" ")[0]+'</span><p>years of practice</p></div><div class="cd"><span class="num">'+r+'</span><p>average rating</p></div><div class="cd"><p><b>'+d[1]+'</b></p><p>education</p></div></div></div><aside class="cd bk"><span class="lm2">First call free</span><h3>₹'+t[5]+'<br>per session</h3><p>Available '+d[4]+'<br>Video, audio or chat</p><div class="tg2">'+SL.map(function(s,k){return '<button class="chip sl'+(k?'':' on')+'" data-s>'+s+'</button>'}).join("")+'</div><button class="btn" id="bk" data-n="'+t[0]+'" data-b="'+t[0]+'|Free 15-min intro call · '+SL[0]+'">Book with '+f+'</button></aside></div><h2>More therapists</h2><div class="grid">'+[1,2,3].map(function(k){return card(T[(i+k)%T.length])}).join("")+'</div></div>';
 }else{var e=E[i],x=DE[i];if(!e||!x)return false;var hi=-1;T.forEach(function(t,k){if(t[0]==x[1])hi=k});
 h='<div class="top s d"><a class="pl" href="#events">Back to events</a><div class="big" style="margin-top:24px"><h1>'+e[2]+'</h1><div class="glass dg"><div class="ph">'+e[0]+'</div>'+e[1]+'<small>'+e[4]+'</small></div></div><p class="lead">'+e[3]+'</p></div><div class="sheet"><div class="dl"><div class="col"><div class="cd tl"><h3>What this is</h3><p>'+x[4]+'</p></div><div class="cd tl"><h3>The plan</h3><ol>'+x[5].map(function(a){return '<li>'+a+'</li>'}).join("")+'</ol></div><div class="cd tl"><h3>Bring along</h3><p>'+x[6]+'</p></div><div class="cd tl"><h3>Hosted by '+x[1]+'</h3><p>Your host leads the session and keeps the room safe and respectful for everyone.</p>'+(hi>=0?'<a class="more" href="#therapist-'+hi+'">View '+x[1]+'’s profile</a>':'')+'</div></div><aside class="cd bk"><div class="dtb"><small>'+e[1]+'</small>'+e[0]+'</div><h3>'+x[0]+'</h3><p>'+e[3]+'</p><span class="lm2">'+e[4]+'</span><div class="bar"><i style="width:'+((x[3]-x[2])/x[3]*100)+'%"></i></div><p>'+x[2]+' of '+x[3]+' seats left</p><button class="btn" data-b="'+e[2]+'|'+e[3]+' · '+e[0]+' '+e[1]+'">Join this event</button></aside></div><h2>More events</h2><div class="grid">'+[1,2,3].map(function(k){var j=(i+k)%E.length;return evc(E[j],j)}).join("")+'</div></div>';}
 el.innerHTML=h;return true}
 var P=["home","therapists","events","about","contact"];
-function route(){var h=location.hash.slice(1),m=h.match(/^(therapist|event)-(\d+)$/),nav=h;if(m&&detail(m[1],+m[2])){h="detail";nav=m[1]=="event"?"events":"therapists"}else if(P.indexOf(h)<0){h="home";nav="home"}document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.id==h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+nav)});$("#nv").classList.remove("open");$("#mb").setAttribute("aria-expanded","false");window.scrollTo(0,0);setTimeout(obs,40)}
+function route(){var h=cur,m=h.match(/^(therapist|event)-(\d+)$/),nav=h;if(m&&detail(m[1],+m[2])){h="detail";nav=m[1]=="event"?"events":"therapists"}else if(P.indexOf(h)<0){h="home";nav="home"}document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.id==h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+nav)});$("#nv").classList.remove("open");$("#mb").setAttribute("aria-expanded","false");window.scrollTo(0,0);setTimeout(obs,40)}
 var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;var el=x.target;io.unobserve(el);if(el.classList.contains("num"))count(el);else el.classList.add("in")})},{threshold:.15}):null;
 function count(el){var m=el.dataset.v.match(/^([\d.]+)(.*)$/);if(!m)return;var n=parseFloat(m[1]),dec=m[1].indexOf(".")>-1?1:0,s=performance.now();(function f(t){var p=Math.min((t-s)/1500,1),e=1-Math.pow(1-p,3);el.textContent=(n*e).toFixed(dec)+m[2];if(p<1)requestAnimationFrame(f);else el.classList.add("pop")})(s)}
 function obs(){if(!io||matchMedia("(prefers-reduced-motion:reduce)").matches)return;document.querySelectorAll(".page.on .sheet .cd,.page.on .sheet .pc,.page.on .sheet details,.page.on .sheet h2,.page.on .sheet .num").forEach(function(el,i){if(el.dataset.o)return;el.dataset.o=1;if(el.classList.contains("num")){var m=el.textContent.match(/^([\d.]+)(.*)$/);if(!m)return;el.dataset.v=el.textContent;el.textContent=(0).toFixed(m[1].indexOf(".")>-1?1:0)+m[2]}else{el.style.setProperty("--d",(i%3)*.09+"s");el.style.setProperty("--rr",(i%2?2:-2)+"deg");el.classList.add("rv")}io.observe(el)})}
-window.addEventListener("hashchange",route);route();
+var cur=location.hash.slice(1);
+function go(h){cur=h;try{location.hash=h}catch(x){}route()}
+window.addEventListener("hashchange",function(){var n=location.hash.slice(1);if(n!==cur){cur=n;route()}});
+document.addEventListener("click",function(e){var a=e.target.closest('a[href^="#"]');if(a){e.preventDefault();go(a.getAttribute("href").slice(1))}});
+route();
 $("#mb").onclick=function(){var o=$("#nv").classList.toggle("open");this.setAttribute("aria-expanded",o)};
 document.addEventListener("click",function(e){var f=e.target.closest("[data-f]");if(f){chips(f.dataset.f);return}var b=e.target.closest("[data-b]");if(b){var p=b.dataset.b.split("|");$("#dt").textContent=p[0];$("#ds").textContent=p[1];$("#df").style.display="grid";$("#dok").style.display="none";$("#df").reset();var d=$("#dg");if(d.showModal)d.showModal();else d.setAttribute("open","")}});
 document.addEventListener("click",function(e){var s=e.target.closest("[data-s]");if(s){s.parentNode.querySelectorAll("[data-s]").forEach(function(c){c.classList.remove("on")});s.classList.add("on");var b=$("#bk");b.dataset.b=b.dataset.n+"|Free 15-min intro call · "+s.textContent}});
